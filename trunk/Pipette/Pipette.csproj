@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B955212D-E8FC-46D4-A7A0-3573E6BBCC77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Pipette</RootNamespace>
+    <AssemblyName>Pipette</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="IMergeableStreams.cs" />
+    <Compile Include="IStreamWork.cs" />
+    <Compile Include="IWorkItemStream.cs" />
+    <Compile Include="IWorkProcessor.cs" />
+    <Compile Include="IWorkStreamMerger.cs" />
+    <Compile Include="IWorkStreamProcessor.cs" />
+    <Compile Include="Standard\DelegateWorkProcessor.cs" />
+    <Compile Include="Standard\MergeableStreams.cs" />
+    <Compile Include="Standard\StreamWork.cs" />
+    <Compile Include="Standard\WorkItemStream.cs" />
+    <Compile Include="Standard\WorkProcessor.cs" />
+    <Compile Include="Infrastructure\GenericExtensions.ThrowHelpers.cs" />
+    <Compile Include="Infrastructure\IEnumerable_T_Extensions.cs" />
+    <Compile Include="Standard\WorkStreamProcessorBase.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Standard\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+</Project>
