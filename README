@@ -1,0 +1,4 @@
+Pipette is an very lightweight fluent API for defining single-threaded work pipelinesk.  It is designed to be used in batch processing scenarios, where a number of work items must feed through several steps of transformations or operations, with failures not stopping processing.
+
+
+Right now the code is very minimal, and not fully tested.  My next piece of work will be adding unit tests and comments to cover the existing behavior.  Following that, I have some changes and expansions I want to make.
