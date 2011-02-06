@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Pipette
 {
-	public static class IEnumerable_T_Extensions
+	internal static class IEnumerable_T_Extensions
 	{
 		public static IEnumerable<TItem> Append<TItem>(this IEnumerable<TItem> source, TItem item)
 		{
